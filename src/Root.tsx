@@ -1,5 +1,6 @@
 import { Composition, Folder } from "remotion";
 import { Scene01 } from "./components/scenes/Scene01";
+import { InstagramStory } from "./components/scenes/InstagramStory";
 import "./style.css";
 
 /**
@@ -9,7 +10,7 @@ import "./style.css";
  * - id: unique identifier used for rendering (npx remotion render <id>)
  * - component: the React component that renders the video
  * - durationInFrames: total length (frames = seconds * fps)
- * - width/height: canvas dimensions (1920x1080 = Full HD)
+ * - width/height: canvas dimensions
  * - fps: frame rate (30 is default)
  *
  * Use <Folder> to organize compositions in the Remotion Studio sidebar.
@@ -26,28 +27,18 @@ export const Root: React.FC = () => {
           height={1080}
           fps={30}
         />
-        {/* Add more scenes here as you build them:
-        <Composition
-          id="Scene02"
-          component={Scene02}
-          durationInFrames={150}
-          width={1920}
-          height={1080}
-          fps={30}
-        />
-        */}
       </Folder>
 
-      {/* Full video combining all scenes -- uncomment when you have multiple scenes:
-      <Composition
-        id="FullVideo"
-        component={FullVideo}
-        durationInFrames={450}
-        width={1920}
-        height={1080}
-        fps={30}
-      />
-      */}
+      <Folder name="Instagram">
+        <Composition
+          id="InstagramStory"
+          component={InstagramStory}
+          durationInFrames={180}
+          width={1080}
+          height={1920}
+          fps={30}
+        />
+      </Folder>
     </>
   );
 };
