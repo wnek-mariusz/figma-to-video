@@ -33,7 +33,7 @@ export const Root: React.FC = () => {
         <Composition
           id="InstagramStory"
           component={InstagramStory}
-          durationInFrames={180}
+          durationInFrames={540}
           width={1080}
           height={1920}
           fps={30}
